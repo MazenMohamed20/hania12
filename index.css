@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif", "Noto Sans Arabic", serif;
+  --font-sans: "Plus Jakarta Sans", "Noto Sans Arabic", sans-serif;
+  --font-arabic: "Noto Sans Arabic", sans-serif;
+
+  --color-primary: #775a19;
+  --color-primary-container: #d4ad65;
+  --color-on-primary-container: #5b4000;
+  --color-secondary: #4e6073;
+  --color-secondary-container: #cfe2f9;
+  --color-surface: #faf9f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f4f3f1;
+  --color-surface-container: #efeeeb;
+  --color-surface-container-high: #e9e8e5;
+  --color-surface-container-highest: #e3e2e0;
+  --color-on-surface: #1a1c1a;
+  --color-on-surface-variant: #4d4635;
+  --color-outline: #7f7663;
+  --color-outline-variant: #d0c5af;
+  --color-primary-fixed-dim: #e9c176;
+  --color-primary-fixed-variant: #5d4201;
+
+  --radius-xl: 3rem;
+  --radius-lg: 2rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+    direction: rtl;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-surface/70 backdrop-blur-2xl border border-outline-variant/15;
+  }
+  
+  .glow-soft {
+    text-shadow: 0 0 20px rgba(119, 90, 25, 0.2);
+  }
+
+  .light-ray {
+    background: radial-gradient(circle at 50% -20%, rgba(212, 173, 101, 0.15) 0%, transparent 60%);
+  }
+
+  .arabic-serif {
+    font-family: "Noto Sans Arabic", serif;
+  }
+}
